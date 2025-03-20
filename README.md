@@ -148,7 +148,7 @@ Gratitude also goes to the open-source community and tools that supported our wo
 ## 📬 Contact & Resources
 
 - **Documentation**: See the docs (`./docs/`) folder for detailed guides.
-- **Questions?**: Reach out via GitHub Discussions or email [email@example.com](mailto:mrarejimmy@jimpsons.org).
+- **Questions?**: Reach out via GitHub Discussions or email [mrarejimmy@jimpsons.org](mailto:mrarejimmy@jimpsons.org).
 
 ---
 
