@@ -1,0 +1,61 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python dependencies
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# Hardhat artifacts and cache
+artifacts/
+cache/
+
+# Logs
+*.log
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Build files
+build/
+dist/
+
+# Frontend-specific files
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+
+# Test outputs
+tests/__pycache__/
+tests/*.tmp
+
+# Temporary files
+*.tmp
+*.swp
+
+# Docker-related files (if applicable)
+docker-compose.override.yml
+*.pid
+
+# Sensitive data or keys
+.env
+.env.local
+.env.*.local
+
+# Generated documentation (optional)
+docs/generated/
+
+# Ignore image assets (if not needed)
+*.jpg
+*.png
+*.svg
+
