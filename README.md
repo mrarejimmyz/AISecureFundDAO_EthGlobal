@@ -1,4 +1,4 @@
-# AISecureFundDAO
+# AISecureFundDAO (ASFD)
 
 is an innovative Decentralized Autonomous Organization (DAO) that combines private voting and sealed-bid auctions on the Ethereum blockchain. By leveraging Trusted Execution Environments (TEEs) and artificial intelligence (AI), it ensures privacy-preserving governance and optimized funding allocation. This project tackles challenges in traditional DAOs, such as lack of privacy and susceptibility to manipulation, making it ideal for applications like research funding, grant distribution, and community treasury management.
 
