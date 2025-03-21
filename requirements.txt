@@ -1,0 +1,26 @@
+# Python Libraries for TEE Components
+cryptography==39.0.1
+requests==2.31.0
+pytest==7.4.0
+flask==2.3.2
+
+# # Marlin TEE SDK (placeholders)
+# marlin-tee-sdk>=1.0.0
+
+# AI Libraries
+numpy==1.24.3
+pandas==2.0.2
+scikit-learn==1.3.0
+transformers==4.30.0
+
+# Nillion Integration SDK (placeholders)
+# nillion-sdk>=1.0.0
+
+# # Sponsor Integration SDKs (placeholders)
+# nethermind-sdk>=1.0.0
+# t1-protocol-sdk>=1.0.0
+# 0g-storage-sdk>=1.0.0
+# coinbase-wallet-sdk>=1.0.0
+
+# General Development Tools
+python-dotenv==1.0.0
