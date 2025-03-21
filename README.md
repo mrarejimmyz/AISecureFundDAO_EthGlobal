@@ -2,6 +2,10 @@
 
 is an innovative Decentralized Autonomous Organization (DAO) that combines private voting and sealed-bid auctions on the Ethereum blockchain. By leveraging Trusted Execution Environments (TEEs) and artificial intelligence (AI), it ensures privacy-preserving governance and optimized funding allocation. This project tackles challenges in traditional DAOs, such as lack of privacy and susceptibility to manipulation, making it ideal for applications like research funding, grant distribution, and community treasury management.
 
+## Architecture Diagram
+
+<img src="SupFinal.jpg" alt="AISecureFundDAO Architecture" width="800">
+
 ## 🌟 Features & Benefits
 
 - **Privacy-Preserving Governance**: Votes and funding pledges remain confidential using TEEs until results are finalized, ensuring fairness and preventing manipulation.
