@@ -4,7 +4,7 @@ is an innovative Decentralized Autonomous Organization (DAO) that combines priva
 
 ## Architecture Diagram
 
-<img src="SupFinal.jpg" alt="AISecureFundDAO Architecture" width="800">
+<img src="SupFinal.png" alt="AISecureFundDAO Architecture" width="800">
 
 ## 🌟 Features & Benefits
 
