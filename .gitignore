@@ -54,8 +54,4 @@ docker-compose.override.yml
 # Generated documentation (optional)
 docs/generated/
 
-# Ignore image assets (if not needed)
-*.jpg
-*.png
-*.svg
 
