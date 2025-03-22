@@ -74,7 +74,8 @@ contract SealedBidAuction {
     /**
      * @dev Finalize auction with TEE-based winner determination
      * @param projectId The auction to finalize
-     * @param teeResult The result from the TEE computation
+     * @param winner The address of the auction winner
+     * @param winningBid The amount of the winning bid
      * @param teeProof Attestation proof verifying the result's authenticity
      */
     function finalizeAuction(
