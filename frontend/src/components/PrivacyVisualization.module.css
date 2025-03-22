@@ -1,0 +1,588 @@
+.privacyContainer {
+    padding: 2rem 0;
+  }
+  
+  .privacyHeader {
+    margin-bottom: 2rem;
+  }
+  
+  .privacyTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .privacyDescription {
+    color: #94a3b8;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 800px;
+  }
+  
+  .privacyTabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    padding-bottom: 0.5rem;
+    overflow-x: auto;
+  }
+  
+  .privacyTab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 0.5rem 0.5rem 0 0;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  
+  .privacyTab:hover {
+    color: #e2e8f0;
+  }
+  
+  .activeTab {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+  }
+  
+  .privacyContent {
+    min-height: 400px;
+  }
+  
+  /* Overview Section */
+  .overviewGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .overviewCard {
+    background-color: rgba(30, 41, 59, 0.5);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    transition: all 0.2s;
+  }
+  
+  .overviewCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-color: rgba(59, 130, 246, 0.2);
+  }
+  
+  .cardIcon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .cardTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 0.75rem;
+  }
+  
+  .cardDescription {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+  
+  .teeArchitecture {
+    background-color: rgba(30, 41, 59, 0.5);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    margin-bottom: 2.5rem;
+  }
+  
+  .architectureTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .architectureDiagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  @media (min-width: 768px) {
+    .architectureDiagram {
+      flex-wrap: nowrap;
+    }
+  }
+  
+  .diagramNode {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 0.75rem;
+    background-color: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+  
+  .diagramNode[data-node="tee"] {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.2);
+  }
+  
+  .nodeIcon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: rgba(30, 41, 59, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b82f6;
+  }
+  
+  .nodeLabel {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #e2e8f0;
+  }
+  
+  .diagramArrow {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.5), rgba(59, 130, 246, 0.1));
+    position: relative;
+    max-width: 5rem;
+  }
+  
+  .dataPacket {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -0.75rem;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  }
+  .animateArrow .dataPacket {
+    animation: movePacket 3s linear infinite;
+  }
+  
+  @keyframes movePacket {
+    0% { left: 0%; }
+    100% { left: 100%; }
+  }
+  
+  .infoButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background-color: rgba(148, 163, 184, 0.1);
+    border: none;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .infoButton:hover {
+    background-color: rgba(148, 163, 184, 0.2);
+    color: #e2e8f0;
+  }
+  
+  .tooltipBox {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    padding: 1rem;
+    background-color: rgba(15, 23, 42, 0.95);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    margin-top: 0.75rem;
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  .tooltipBox h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tooltipBox p {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+  
+  .sponsorSection {
+    background-color: rgba(30, 41, 59, 0.5);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+  }
+  
+  .sponsorTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .sponsorGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+  
+  .sponsorItem {
+    padding: 1rem;
+    background-color: rgba(15, 23, 42, 0.5);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .sponsorName {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 0.25rem;
+  }
+  
+  .sponsorRole {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+  
+  /* Flow Sections */
+  .flowSection {
+    padding: 1.5rem;
+    background-color: rgba(30, 41, 59, 0.5);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+  }
+  
+  .flowTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .flowDiagram {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .flowStep {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: rgba(15, 23, 42, 0.5);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    position: relative;
+  }
+  
+  .flowIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .flowContent {
+    flex: 1;
+  }
+  
+  .flowStepTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 0.5rem;
+  }
+  
+  .flowStepDescription {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+  
+  .flowArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b82f6;
+  }
+  
+  .privacyBenefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .benefitCard {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: rgba(59, 130, 246, 0.05);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(59, 130, 246, 0.1);
+  }
+  
+  .benefitIcon {
+    color: #10b981;
+  }
+  
+  .benefitText {
+    font-size: 0.875rem;
+    color: #e2e8f0;
+    line-height: 1.5;
+  }
+  
+  /* AI Privacy Section */
+  .aiContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .aiVisual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .aiNode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .aiNodeIcon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.75rem;
+    background-color: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b82f6;
+  }
+  
+  .aiNodeLabel {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #e2e8f0;
+  }
+  
+  .aiProcessor {
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .processorRing {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    animation: rotate 10s linear infinite;
+  }
+  
+  .ringOuter {
+    width: 6rem;
+    height: 6rem;
+    border: 2px dashed rgba(59, 130, 246, 0.3);
+    animation: rotateReverse 15s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes rotateReverse {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+  }
+  
+  .processorCore {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b5cf6;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    z-index: 1;
+  }
+  
+  .processorLabel {
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #8b5cf6;
+  }
+  
+  .aiFeatures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  
+  .aiFeatureCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: rgba(15, 23, 42, 0.5);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    position: relative;
+  }
+  
+  .aiFeatureIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .aiFeatureContent {
+    flex: 1;
+  }
+  
+  .aiFeatureTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 0.5rem;
+  }
+  
+  .aiFeatureDescription {
+    font-size: 0.875rem;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+  
+  .securityNote {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgba(245, 158, 11, 0.05);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(245, 158, 11, 0.1);
+  }
+  
+  .warningIcon {
+    color: #f59e0b;
+    flex-shrink: 0;
+  }
+  
+  .securityNoteContent {
+    flex: 1;
+  }
+  
+  .securityNoteTitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 0.5rem;
+  }
+  
+  .securityNoteText {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    line-height: 1.5;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
