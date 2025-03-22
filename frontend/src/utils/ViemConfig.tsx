@@ -18,7 +18,7 @@ export const address: any = async () => {
   }
 };
 
-// eg: Metamask
+// eg: Metamask or Coinbase AgentKit
 export const walletClient = createWalletClient({
   account: address[0],
   chain: arbitrumSepolia,
