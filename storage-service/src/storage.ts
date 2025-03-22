@@ -2,11 +2,19 @@ import { Indexer, ZgFile } from '@0glabs/0g-ts-sdk';
 import { ethers } from 'ethers';
 import * as path from 'path';
 import * as fs from 'fs';
+import dotenv from 'dotenv';
 
+
+dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 // Network configuration
 const RPC_URL = process.env.RPC_URL || 'https://evmrpc-testnet.0g.ai/';
 const INDEXER_RPC = process.env.INDEXER_RPC || 'https://indexer-storage-testnet-standard.0g.ai';
-const PRIVATE_KEY = process.env.PRIVATE_KEY || '';
+// Format private key correctly with 0x prefix if needed
+const PRIVATE_KEY = process.env.PRIVATE_KEY ? 
+  (process.env.PRIVATE_KEY.startsWith('0x') ? 
+    process.env.PRIVATE_KEY : 
+    `0x${process.env.PRIVATE_KEY}`) : 
+  '';
 
 export class StorageService {
   private indexer: Indexer;
