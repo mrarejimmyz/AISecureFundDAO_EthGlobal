@@ -4,6 +4,9 @@ import path from 'path';
 import fs from 'fs';
 import { StorageService } from './storage';
 
+import dotenv from 'dotenv';
+
+dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 const app = express();
 const port = process.env.PORT || 3001;
 

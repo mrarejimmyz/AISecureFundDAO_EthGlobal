@@ -4,17 +4,31 @@ from integrations.og_storage.typescript_client import ZeroGStorageClient
 
 class StorageManager:
     def __init__(self, service_url="http://localhost:3001"):
-        self.client = ZeroGStorageClient(service_url)
+        self.service_url = service_url
     
+    # De-prioritize blob storage but keep the method
     def upload_file(self, file_path):
-        return self.client.upload_file(file_path)
+        # For hackathon demo, simply log that this would upload a file
+        print(f"NOTICE: Blob storage upload not functioning. Would have uploaded: {file_path}")
+        return {"rootHash": f"simulated-hash-{hash(file_path)}", "transactionHash": "simulated-tx"}
     
+    # De-prioritize blob storage but keep the method
     def retrieve_file(self, blob_id, output_path):
-        return self.client.download_file(blob_id, output_path)
+        # For hackathon demo, simply log that this would download a file
+        print(f"NOTICE: Blob storage download not functioning. Would have downloaded to: {output_path}")
+        return False
     
+    # Focus on these two working methods
     def store_metadata(self, key, value):
-        return self.client.store_key_value(key, value)
+        # This method is working - use it for your demo
+        from integrations.og_storage.typescript_client import ZeroGStorageClient
+        client = ZeroGStorageClient(self.service_url)
+        return client.store_key_value(key, value)
     
     def retrieve_metadata(self, key):
-        response = self.client.retrieve_key_value(key)
+        # This method is working - use it for your demo
+        from integrations.og_storage.typescript_client import ZeroGStorageClient
+        client = ZeroGStorageClient(self.service_url)
+        response = client.retrieve_key_value(key)
         return response.get("value") if response else None
+
