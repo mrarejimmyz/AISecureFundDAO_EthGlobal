@@ -24,3 +24,8 @@ transformers==4.30.0
 
 # General Development Tools
 python-dotenv==1.0.0
+
+crewai==0.28.1
+langchain-community==0.0.13
+llama-cpp-python==0.2.26
+
