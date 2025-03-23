@@ -1,0 +1,343 @@
+.projectsContainer {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectsTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.walletWarning {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  margin-bottom: 1.5rem;
+}
+
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  min-height: 200px;
+}
+
+.loadingSpinner {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 3px solid rgba(99, 102, 241, 0.1);
+  border-top-color: #6366f1;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.errorState {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  margin-bottom: 1.5rem;
+}
+
+.emptyState {
+  padding: 3rem;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  text-align: center;
+  color: #6b7280;
+}
+
+.projectsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.projectCard {
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.projectCard:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.activeProject {
+  border-left: 4px solid #10b981;
+}
+
+.inactiveProject {
+  border-left: 4px solid #9ca3af;
+  opacity: 0.8;
+}
+
+.activeVoting {
+  border-left: 4px solid #6366f1;
+}
+
+.endedVoting {
+  border-left: 4px solid #f59e0b;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.projectId {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.statusBadges {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.projectStatusBadge,
+.votingStatusBadge,
+.votingEndedBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.projectStatusBadge {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+}
+
+.votingStatusBadge {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: #6366f1;
+}
+
+.votingEndedBadge {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+}
+
+.projectTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.projectDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.detailItem svg {
+  color: #6b7280;
+}
+
+.detailLabel {
+  display: block;
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.detailValue {
+  display: block;
+  color: #1f2937;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.projectActions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.createProposalButton,
+.voteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.875rem;
+  border: none;
+}
+
+.createProposalButton {
+  background-color: #6366f1;
+  color: #ffffff;
+  flex: 1;
+}
+
+.createProposalButton:hover:not(:disabled) {
+  background-color: #4f46e5;
+}
+
+.createProposalButton:disabled {
+  background-color: #c7d2fe;
+  cursor: not-allowed;
+}
+
+.voteButton {
+  background-color: #10b981;
+  color: #ffffff;
+  flex: 1;
+}
+
+.voteButton:hover {
+  background-color: #059669;
+}
+
+.votingInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: #f9fafb;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 1rem;
+}
+
+.votingInfo svg {
+  color: #6366f1;
+  flex-shrink: 0;
+}
+
+.votingInfo p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.refreshButton {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.refreshButton button {
+  padding: 0.75rem 1.5rem;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  color: #4b5563;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.refreshButton button:hover {
+  background-color: #e5e7eb;
+}
+
+.teeExplanation {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  display: flex;
+  gap: 1rem;
+}
+
+.teeIcon {
+  color: #6366f1;
+  flex-shrink: 0;
+}
+
+.teeTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.teeText {
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.successMessage {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.successContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.transactionInfo {
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.hashLink {
+  color: #3b82f6;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: monospace;
+  transition: color 0.2s;
+}
+
+.hashLink:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.linkIcon {
+  margin-left: 0.25rem;
+}
