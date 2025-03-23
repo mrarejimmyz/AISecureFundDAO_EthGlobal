@@ -1,3 +1,4 @@
+/* ---------------- Global & Layout Styles ---------------- */
 .votingContainer {
   padding: 2rem 0;
   max-width: 1200px;
@@ -38,6 +39,7 @@
   margin-bottom: 1.5rem;
 }
 
+/* ---------------- Proposal Card ---------------- */
 .proposalCard {
   background-color: rgba(30, 41, 59, 0.5);
   border: 1px solid rgba(148, 163, 184, 0.1);
@@ -127,6 +129,7 @@
   line-height: 1.5;
 }
 
+/* ---------------- Project Details ---------------- */
 .projectDetails {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -162,29 +165,52 @@
   color: #e2e8f0;
 }
 
+/* ---------------- Project Actions ---------------- */
 .projectActions {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-top: 1rem;
 }
 
+/* Analyze Proposal Button */
+.analyzeProposalButton {
+  background: linear-gradient(90deg, #3b82f6, #4f46e5);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.analyzeProposalButton:hover {
+  box-shadow: 0 6px 10px -1px rgba(59, 130, 246, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Create Voting Proposal Button */
 .createProposalButton {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
   background: linear-gradient(90deg, #3b82f6, #4f46e5);
   color: white;
-  font-size: 0.875rem;
-  font-weight: 500;
   border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
 }
 
 .createProposalButton:hover:not(:disabled) {
   box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+  transform: translateY(-1px);
 }
 
 .createProposalButton:disabled {
@@ -192,6 +218,7 @@
   cursor: not-allowed;
 }
 
+/* ---------------- Vote Options ---------------- */
 .voteOptions {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
@@ -264,6 +291,7 @@
   cursor: not-allowed;
 }
 
+/* ---------------- Encryption Process ---------------- */
 .encryptionProcess {
   margin-top: 1.5rem;
   padding: 1rem;
@@ -331,6 +359,13 @@
   color: #93c5fd;
 }
 
+/* ---------------- Keyframes ---------------- */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
@@ -343,6 +378,7 @@
   }
 }
 
+/* ---------------- Wallet Warning & Loading ---------------- */
 .walletWarning {
   display: flex;
   align-items: center;
@@ -374,12 +410,6 @@
   border-top-color: #3b82f6;
   animation: spin 1s linear infinite;
   margin-bottom: 1rem;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .errorState {
@@ -439,6 +469,7 @@
   margin: 1.5rem 0;
 }
 
+/* ---------------- TEE Explanation ---------------- */
 .teeExplanation {
   margin-top: 2rem;
   padding: 1.5rem;
@@ -473,29 +504,239 @@
   line-height: 1.5;
 }
 
-.proposalResult {
-  padding-top: 1rem;
-  border-top: 1px solid rgba(148, 163, 184, 0.1);
-  display: flex;
-  justify-content: center;
+/* ---------------- Analysis/Optimization Styles ---------------- */
+
+/* Reuse fadeIn animation defined above for analysis items */
+/* Analysis Container */
+.analysisContainer {
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
 
-.resultBadge {
+/* Analysis Header & Title */
+.analysisHeader {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0.75rem;
-  border-radius: 0.375rem;
-  font-weight: 500;
-  width: 100%;
+  margin-bottom: 0.75rem;
 }
 
-.approvedBadge {
-  background-color: rgba(16, 185, 129, 0.1);
-  color: #10b981;
+.analysisTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #374151;
+  margin-left: 0.5rem;
 }
 
-.rejectedBadge {
-  background-color: rgba(239, 68, 68, 0.1);
-  color: #ef4444;
+/* Analysis Section (for grouping risks, benefits, etc.) */
+.analysisSection {
+  margin-bottom: 1rem;
+}
+
+.analysisSectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.analysisList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.analysisItem {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.analysisItem .analysisIcon {
+  margin-right: 0.5rem;
+  color: #3b82f6;
+}
+
+/* Incremental delays for analysis items (assumes 4 items) */
+.analysisContainer .analysisItem:nth-child(2) {
+  animation-delay: 2s;
+}
+.analysisContainer .analysisItem:nth-child(3) {
+  animation-delay: 4s;
+}
+.analysisContainer .analysisItem:nth-child(4) {
+  animation-delay: 6s;
+}
+
+/* Optimize Section */
+.optimizeSection {
+  /* border-top: 1px dashed #d1d5db; */
+  background-color: white;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.optimizeTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.optimizeItem {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  color: #374151;
+}
+
+/* Incremental delays for optimize items (assumes 3 items) */
+.optimizeSection .optimizeItem:nth-child(2) {
+  animation-delay: 2s;
+}
+.optimizeSection .optimizeItem:nth-child(3) {
+  animation-delay: 4s;
+}
+
+/* Cancel Analysis Button */
+.cancelAnalysisButton {
+  background: #ef4444;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.cancelAnalysisButton:hover {
+  background: #dc2626;
+}
+
+/* ---------------- End of CSS ---------------- */
+/* ---------------- Analysis/Optimization Styles ---------------- */
+
+/* Reuse fadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Analysis Container */
+.analysisContainer {
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  color: #000; /* Set all text inside to black */
+}
+
+/* Analysis Header & Title */
+.analysisHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.analysisTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000; /* black text */
+  margin-left: 0.5rem;
+}
+
+/* Analysis Section */
+.analysisSection {
+  margin-bottom: 1rem;
+}
+
+.analysisSectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000; /* black text */
+  margin-bottom: 0.5rem;
+}
+
+.analysisList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.analysisItem {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #000; /* Ensure each item text is black */
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Analysis Icon */
+.analysisItem .analysisIcon {
+  margin-right: 0.5rem;
+  color: #3b82f6; /* Keep icon color if desired */
+}
+
+/* Incremental delays for analysis items (assumes 4 items) */
+.analysisContainer .analysisItem:nth-child(2) {
+  animation-delay: 2s;
+}
+.analysisContainer .analysisItem:nth-child(3) {
+  animation-delay: 4s;
+}
+.analysisContainer .analysisItem:nth-child(4) {
+  animation-delay: 6s;
+}
+
+/* Optimize Voting Section */
+.optimizeSection {
+  border-top: 1px dashed #d1d5db;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  color: #000; /* text in optimize section set to black */
+}
+
+.optimizeTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000; /* black text */
+  margin-bottom: 0.75rem;
+}
+
+.optimizeItem {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #000; /* black text */
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Incremental delays for optimize items (assumes 3 items) */
+.optimizeSection .optimizeItem:nth-child(2) {
+  animation-delay: 2s;
+}
+.optimizeSection .optimizeItem:nth-child(3) {
+  animation-delay: 4s;
 }

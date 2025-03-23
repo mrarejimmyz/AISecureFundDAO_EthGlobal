@@ -7602,6 +7602,11 @@ js-yaml@^4.1.0:
   dependencies:
     argparse "^2.0.1"
 
+jsbn@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-1.1.0.tgz#b01307cb29b618a1ed26ec79e911f803c4da0040"
+  integrity sha512-4bYVV3aAMtDTTu4+xsDYa6sy9GyJ69/amsu9sYF2zqjiEoZA5xJi3BrfX3uY+/IekIu7MwdObdbDWpoZdBv3/A==
+
 jsdom@^16.6.0:
   version "16.7.0"
   resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-16.7.0.tgz#918ae71965424b197c819f8183a754e18977b710"
@@ -7719,6 +7724,13 @@ jsonpointer@^5.0.0:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/jsonpointer/-/jsonpointer-5.0.1.tgz#2110e0af0900fd37467b5907ecd13a7884a1b559"
   integrity sha512-p/nXbhSEcu3pZRdkW1OfJhpsVtW1gd4Wa1fnQc9YLiTfAjn0312eMKimbdIQzuZl9aa9xUGaRlP9T/CJE/ditQ==
+
+jspaillier@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/jspaillier/-/jspaillier-0.1.1.tgz#cc1857c5f9f5751c83bf52ac3571556f2ab5dae2"
+  integrity sha512-jUbzLxXnpUAVPR6gatdNkr+1e6iw6NG/qA1Vooqp5Pmu0Tj5cCU01pJ7yurQukEZ8IRQtJV+qEh/FOVJJBTNYg==
+  dependencies:
+    jsbn "1.1.0"
 
 "jsx-ast-utils@^2.4.1 || ^3.0.0", jsx-ast-utils@^3.3.5:
   version "3.3.5"
@@ -8234,6 +8246,11 @@ node-releases@^2.0.19:
   version "2.0.19"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.19.tgz#9e445a52950951ec4d177d843af370b411caf314"
   integrity sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==
+
+node-seal@^5.1.4:
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/node-seal/-/node-seal-5.1.4.tgz#0f17d7c6737191a58aa6a4fa1062aa813cce22af"
+  integrity sha512-GwxUupLuLP9wMivqybwT9OOhkDunADBnQmKFbwabnZaPgQTBXY3AZRWDamUCQxzWjn7t+Pxwl8FxZSisgKXJwA==
 
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
