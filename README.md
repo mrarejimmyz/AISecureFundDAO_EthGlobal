@@ -142,8 +142,6 @@ Thanks to our sponsors and the technologies powering this project:
 - **Marlin TEEs**: Secure computation
 - **Nethermind**: Agentic AI capabilities
 - **Nillion**: Privacy-preserving AI
-- **t1 Protocol**: Real-time proving
-- **Autonome**: AI agent development
 - **0G**: Decentralized storage
 - **Coinbase AgentKit**: Wallet management
 
