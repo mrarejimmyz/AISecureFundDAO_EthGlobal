@@ -53,5 +53,7 @@ docker-compose.override.yml
 
 # Generated documentation (optional)
 docs/generated/
+**/model/llama-2-7b-chat.Q4_0.gguf
+
 
 

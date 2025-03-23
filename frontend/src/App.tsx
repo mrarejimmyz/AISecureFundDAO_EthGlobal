@@ -16,6 +16,7 @@ import ProjectSubmission from "./components/ProjectSubmission";
 import AuctionInterface from "./components/AuctionInterface";
 import ResultsVisualization from "./components/ResultsVisualization";
 import PrivacyVisualization from "./components/PrivacyVisualization";
+import ProjectDisplay from "./components/ProjectDisplay";
 import styles from "./App.module.css";
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
         return <ProjectSubmission />;
       case "privacy": // Add this new case
         return <PrivacyVisualization />;
+      case "projects": // Add this new case
+        return <ProjectDisplay />;
       default:
         return <Dashboard />;
     }
